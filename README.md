@@ -44,8 +44,8 @@ AndroidNetworking.get("https://fierce-cove-29863.herokuapp.com/getAllUsers/{page
 ### Making a POST Request
 ```java
 AndroidNetworking.post("https://fierce-cove-29863.herokuapp.com/createAnUser")
-                 .addBodyParameter("firstname", "Amit")
-                 .addBodyParameter("lastname", "Shekhar")
+                 .addBodyParameter("firstname", "test1")
+                 .addBodyParameter("lastname", "test")
                  .setTag("test")
                  .setPriority(Priority.MEDIUM)
                  .build()
@@ -63,8 +63,8 @@ AndroidNetworking.post("https://fierce-cove-29863.herokuapp.com/createAnUser")
 You can also post java object, json, file, etc in POST request like this.
 ```java
 User user = new User();
-user.firstname = "Amit";
-user.lastname = "Shekhar";
+user.firstname = "Test1";
+user.lastname = "test2";
 
 AndroidNetworking.post("https://fierce-cove-29863.herokuapp.com/createUser")
                  .addBodyParameter(user) // posting java object
@@ -85,8 +85,8 @@ AndroidNetworking.post("https://fierce-cove-29863.herokuapp.com/createUser")
 
 JSONObject jsonObject = new JSONObject();
 try {
-    jsonObject.put("firstname", "Amit");
-    jsonObject.put("lastname", "Shekhar");
+    jsonObject.put("firstname", "Test");
+    jsonObject.put("lastname", "test2");
 } catch (JSONException e) {
   e.printStackTrace();
 }
@@ -577,7 +577,7 @@ As it uses [OkHttp](http://square.github.io/okhttp/) as a networking layer, it s
 
 ### License
 ```
-   Copyright (C) 2022 Amit Shekhar
+   Copyright (C) 2022 BioCube
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
